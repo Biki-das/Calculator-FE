@@ -21,9 +21,9 @@
             <p>3</p>
           </div>
           <div id="theme-toggler" class="flex bg-theme1keypadandtogglebgcolor rounded-2xl justify-around items-center w-[70px] h-[25px] transition-[background] duration-[0.3s]">
-            <input class="appearance-none rounded-full w-[16px] h-[16px] bg-theme1redkey transition-[background] duration-[0.3s] cursor-pointer" type="radio" name="theme" id="theme-1" checked="checked">
-            <input class="appearance-none rounded-full w-[16px] h-[16px]  transition-[background] duration-[0.3s] cursor-pointer " type="radio" name="theme" id="theme-2">
-            <input class="appearance-none rounded-full w-[16px] h-[16px]  transition-[background] duration-[0.3s] cursor-pointer" type="radio" name="theme" id="theme-3">
+            <input class="appearance-none rounded-full w-[16px] h-[16px] bg-theme1redkey transition-[background] duration-[0.3s] cursor-pointer" type="radio" name="theme-btn" id="theme-1">
+            <input class="appearance-none rounded-full w-[16px] h-[16px]  transition-[background] duration-[0.3s] cursor-pointer " type="radio" name="theme-btn" id="theme-2">
+            <input class="appearance-none rounded-full w-[16px] h-[16px]  transition-[background] duration-[0.3s] cursor-pointer" type="radio" name="theme-btn" id="theme-3">
           </div>
 
         </div>
@@ -32,7 +32,7 @@
 
     <section id="calc-screen" class="h-[90px] md:h-[130px] mt-[36px] bg-theme1screenbgcolor w-full rounded-md flex justify-end items-center text-white transition-[color,background] duration-[0.3s]"
     >
-  <h2 class="text-[40px] mr-[2rem]">399,981</h2>
+  <h2 id="calc-output" class="text-[40px] mr-[2rem]">0</h2>
   </section>
 
 
@@ -40,41 +40,31 @@
    <section id="calc-keypad" class="h-[430px] mt-[25px] lg:mt-[20px] bg-theme1keypadandtogglebgcolor rounded-md flex justify-center items-center transition-[background] duration-[]">
      <div id="keypad-container">
      <div id="keypads" class="grid grid-cols-4 gap-x-6 gap-y-3 md:gap-4 place-content-center mx-auto w-full">
-        <div class="num-keys md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1lightgrayorange flex justify-center items-center cursor-pointer rounded-md shadow-theme1 active:scale-[1.1] transition-[scale,background] duration-[0.3s] text-theme1numtext"><p class="text-[30px] select-none">7</p></div>
-        <div class="num-keys md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1lightgrayorange flex justify-center items-center cursor-pointer rounded-md shadow-theme1 active:scale-[1.1] transition-[scale,background] duration-[0.3s] text-theme1numtext"><p class="text-[30px] select-none">8</p></div>
-        <div class="num-keys md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1lightgrayorange flex justify-center items-center cursor-pointer rounded-md shadow-theme1 active:scale-[1.1] transition-[scale,background] duration-[0.3s] text-theme1numtext"><p class="text-[30px] select-none">9</p></div>
-        <div id="delete-key" class="md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1keybgcolor flex justify-center items-center cursor-pointer rounded-md shadow-theme1key active:scale-[1.1] transition-[scale,background] duration-[0.3s]"><p class="text-[17px] md:text-[30px] select-none text-white">DEL</p></div>
-        <div class="num-keys md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1lightgrayorange flex justify-center items-center cursor-pointer rounded-md shadow-theme1 active:scale-[1.1] transition-[scale,background] duration-[0.3s] text-theme1numtext"><p class="text-[30px] select-none">4</p></div>
-        <div class="num-keys md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1lightgrayorange flex justify-center items-center cursor-pointer rounded-md shadow-theme1 active:scale-[1.1] transition-[scale,background] duration-[0.3s] text-theme1numtext"><p class="text-[30px] select-none">5</p></div>
-        <div class="num-keys md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1lightgrayorange flex justify-center items-center cursor-pointer rounded-md shadow-theme1 active:scale-[1.1] transition-[scale,background] duration-[0.3s] text-theme1numtext"><p class="text-[30px] select-none">6</p></div>
-        <div class="num-keys md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1lightgrayorange flex justify-center items-center cursor-pointer rounded-md shadow-theme1 active:scale-[1.1] transition-[scale,background] duration-[0.3s] text-theme1numtext"><p class="text-[30px] select-none">+<p></div>
-        <div class="num-keys md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1lightgrayorange flex justify-center items-center cursor-pointer rounded-md shadow-theme1 active:scale-[1.1] transition-[scale,background] duration-[0.3s] text-theme1numtext"><p class="text-[30px] select-none">1</p></div>
-        <div class="num-keys md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1lightgrayorange flex justify-center items-center cursor-pointer rounded-md shadow-theme1 active:scale-[1.1] transition-[scale,background] duration-[0.3s] text-theme1numtext"><p class="text-[30px] select-none">2</p></div>
-        <div class="num-keys md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1lightgrayorange flex justify-center items-center cursor-pointer rounded-md shadow-theme1 active:scale-[1.1] transition-[scale,background] duration-[0.3s] text-theme1numtext"><p class="text-[30px] select-none">3</p></div>
-        <div class="num-keys md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1lightgrayorange flex justify-center items-center cursor-pointer rounded-md shadow-theme1 active:scale-[1.1] transition-[scale,background] duration-[0.3s] text-theme1numtext"><p class="text-[30px] select-none">-</p></div>
-        <div class="num-keys md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1lightgrayorange flex justify-center items-center cursor-pointer rounded-md shadow-theme1 active:scale-[1.1] transition-[scale,background] duration-[0.3s] text-theme1numtext"><p class="text-[30px] select-none">.</p></div>
-        <div class="num-keys md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1lightgrayorange flex justify-center items-center cursor-pointer rounded-md shadow-theme1 active:scale-[1.1] transition-[scale,background] duration-[0.3s] text-theme1numtext"><p class="text-[30px] select-none">0</p></div>
-        <div class="num-keys md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1lightgrayorange flex justify-center items-center cursor-pointer rounded-md shadow-theme1 active:scale-[1.1] transition-[scale,background] duration-[0.3s] text-theme1numtext"><p class="text-[30px] select-none">/</p></div>
-        <div class="num-keys md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1lightgrayorange flex justify-center items-center cursor-pointer rounded-md shadow-theme1 active:scale-[1.1] transition-[scale,background] duration-[0.3s] text-theme1numtext"><p class="text-[30px] select-none">x</p></div>
+        <div data-number class="num-keys md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1lightgrayorange flex justify-center items-center cursor-pointer rounded-md shadow-theme1 active:scale-[1.1] transition-[scale,background] duration-[0.3s] text-theme1numtext"><p class="text-[30px] select-none pointer-events-none">7</p></div>
+        <div data-number class="num-keys md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1lightgrayorange flex justify-center items-center cursor-pointer rounded-md shadow-theme1 active:scale-[1.1] transition-[scale,background] duration-[0.3s] text-theme1numtext"><p class="text-[30px] select-none pointer-events-none">8</p></div>
+        <div data-number class="num-keys md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1lightgrayorange flex justify-center items-center cursor-pointer rounded-md shadow-theme1 active:scale-[1.1] transition-[scale,background] duration-[0.3s] text-theme1numtext"><p class="text-[30px] select-none pointer-events-none">9</p></div>
+        <div id="delete-key" class="md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1keybgcolor flex justify-center items-center cursor-pointer rounded-md shadow-theme1key active:scale-[1.1] transition-[scale,background] duration-[0.3s]"><p class="text-[17px] md:text-[30px] select-none pointer-events-none text-white">DEL</p></div>
+        <div data-number class="num-keys md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1lightgrayorange flex justify-center items-center cursor-pointer rounded-md shadow-theme1 active:scale-[1.1] transition-[scale,background] duration-[0.3s] text-theme1numtext"><p class="text-[30px] select-none pointer-events-none">4</p></div>
+        <div data-number class="num-keys md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1lightgrayorange flex justify-center items-center cursor-pointer rounded-md shadow-theme1 active:scale-[1.1] transition-[scale,background] duration-[0.3s] text-theme1numtext"><p class="text-[30px] select-none pointer-events-none">5</p></div>
+        <div data-number class="num-keys md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1lightgrayorange flex justify-center items-center cursor-pointer rounded-md shadow-theme1 active:scale-[1.1] transition-[scale,background] duration-[0.3s] text-theme1numtext"><p class="text-[30px] select-none pointer-events-none">6</p></div>
+        <div data-operation class="num-keys md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1lightgrayorange flex justify-center items-center cursor-pointer rounded-md shadow-theme1 active:scale-[1.1] transition-[scale,background] duration-[0.3s] text-theme1numtext"><p class="text-[30px] select-none pointer-events-none">+<p></div>
+        <div data-number class="num-keys md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1lightgrayorange flex justify-center items-center cursor-pointer rounded-md shadow-theme1 active:scale-[1.1] transition-[scale,background] duration-[0.3s] text-theme1numtext"><p class="text-[30px] select-none pointer-events-none">1</p></div>
+        <div data-number class="num-keys md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1lightgrayorange flex justify-center items-center cursor-pointer rounded-md shadow-theme1 active:scale-[1.1] transition-[scale,background] duration-[0.3s] text-theme1numtext"><p class="text-[30px] select-none pointer-events-none">2</p></div>
+        <div data-number class="num-keys md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1lightgrayorange flex justify-center items-center cursor-pointer rounded-md shadow-theme1 active:scale-[1.1] transition-[scale,background] duration-[0.3s] text-theme1numtext"><p class="text-[30px] select-none pointer-events-none">3</p></div>
+        <div data-operation class="num-keys md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1lightgrayorange flex justify-center items-center cursor-pointer rounded-md shadow-theme1 active:scale-[1.1] transition-[scale,background] duration-[0.3s] text-theme1numtext"><p class="text-[30px] select-none pointer-events-none">-</p></div>
+        <div data-number class="num-keys md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1lightgrayorange flex justify-center items-center cursor-pointer rounded-md shadow-theme1 active:scale-[1.1] transition-[scale,background] duration-[0.3s] text-theme1numtext"><p class="text-[30px] select-none pointer-events-none">.</p></div>
+        <div data-number class="num-keys md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1lightgrayorange flex justify-center items-center cursor-pointer rounded-md shadow-theme1 active:scale-[1.1] transition-[scale,background] duration-[0.3s] text-theme1numtext"><p class="text-[30px] select-none pointer-events-none">0</p></div>
+        <div data-operation class="num-keys md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1lightgrayorange flex justify-center items-center cursor-pointer rounded-md shadow-theme1 active:scale-[1.1] transition-[scale,background] duration-[0.3s] text-theme1numtext"><p class="text-[30px] select-none pointer-events-none">/</p></div>
+        <div data-operation class="num-keys md:w-[100px] w-[60px] md:h-[65px] h-[65px] bg-theme1lightgrayorange flex justify-center items-center cursor-pointer rounded-md shadow-theme1 active:scale-[1.1] transition-[scale,background] duration-[0.3s] text-theme1numtext"><p class="text-[30px] select-none pointer-events-none">x</p></div>
      </div>
      <div id="keypad-btns" class="flex mt-4 gap-x-[20px]">
         <button id="reset-key" class="flex-1 bg-theme1keybgcolor h-[60px] rounded-md flex justify-center items-center shadow-theme1key active:scale-[1.1] transition-[scale,background] duration-[0.3s]"><p class="text-white text-[20px]">RESET</p></button>
         <button id="equal-key" class="flex-1 bg-theme1redkey h-[60px] rounded-md flex justify-center items-center shadow-theme1redkeys active:scale-[1.1] transition-[scale,background] duration-[0.3s]"><p class="text-white text-[20px]">=</p></button>
      </div>
      </div>
-
    </section>
-
-
     </main>
-     
-
-
     <script type="module" src="/main.js"></script>
   </body>
 </html>
 
-
-<!-- hover:bg-[#f76454] -->
-<!-- hover:bg-[#fb8a44] -->
-<!-- hover:bg-[#98fdf9] -->
